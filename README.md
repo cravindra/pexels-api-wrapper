@@ -31,7 +31,7 @@ pexelsClient.search("food", 10, 1)
     });
 
 //Get Popular Photos
-pexelsClient.popular(10, 1)
+pexelsClient.getPopularPhotos(10, 1)
     .then(function(result){
         console.log(result);
     }).
