@@ -58,6 +58,7 @@ PexelsAPI.search(query, per_page, page);
 ```
 #### Popular
 Promise factory to interact with Pexels Popular Photos API
+
 | Param | Type | Description |
 | ----- | ---- | ----------- |
 | **per_page** | *number* | The number of results to return per page (Defaults to 10)
