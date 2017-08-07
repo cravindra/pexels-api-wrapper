@@ -1,6 +1,6 @@
 {
   "name": "pexels-api-wrapper",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple promise wrapper for the Pexels API",
   "main": "index.js",
   "scripts": {
