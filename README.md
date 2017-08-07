@@ -66,3 +66,11 @@ Promise factory to interact with Pexels Popular Photos API
 ```js
 PexelsAPI.popular(per_page, page);
 ```
+
+
+### Acknowledgements
+Thanks, [Pexels](http://pexels.com) for creating a great platform for great images. Always rooting for you.
+
+
+Made with :heart: at [Shopalyst](http://shopalyst.com)
+
