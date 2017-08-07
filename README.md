@@ -1,5 +1,5 @@
 # Pexels API
-A simple wrapper to use the [Pexels API](https://www.pexels.com/api/). Please refer to the API Docs to understand the expected parameters and the anticipated response structure.
+A simple wrapper to use the [Pexels API](https://www.pexels.com/api/).
 
 ### Installation
 
@@ -45,19 +45,23 @@ pexelsClient.popular(10, 1)
 
 #### Search
 Promise factory to interact with Pexels Search API
-##### Params:
-**query** *[string]* The search term to query the API with
-**per_page** *[number]* The number of results to return per page (Defaults to 10)
-**page** *[number]* The page number to return (Defaults to 1)
+
+
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| **query** | *string* | The search term to query the API with
+| **per_page** | *number* | The number of results to return per page (Defaults to 10)
+| **page** | *number* | The page number to return (Defaults to 1)
 
 ```js
 PexelsAPI.search(query, per_page, page);
 ```
 #### Popular
 Promise factory to interact with Pexels Popular Photos API
-##### Params:
-**per_page** *[number]* The number of results to return per page (Defaults to 10)
-**page** *[number]* The page number to return (Defaults to 1)
+| Param | Type | Description |
+| ----- | ---- | ----------- |
+| **per_page** | *number* | The number of results to return per page (Defaults to 10)
+| **page** | *number* | The page number to return (Defaults to 1)
 
 ```js
 PexelsAPI.popular(per_page, page);
