@@ -1,9 +1,9 @@
 # Pexels API
-A simple wrapper to use the [Pexels API](https://www.pexels.com/api/).
+A simple wrapper to use the [Pexels API](https://www.pexels.com/api/). Please refer to the API docs to undestand the inputs and expected results.
 
 ### Installation
 
-Install the paakage
+Install the package
 
 ```sh
 $ cd /path/to/app
