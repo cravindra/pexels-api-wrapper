@@ -1,0 +1,14 @@
+{
+  "name": "pexels-api-wrapper",
+  "version": "1.0.0",
+  "description": "A simple promise wrapper for the Pexels API",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chirag Ravindra",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^1.7.1"
+  }
+}
