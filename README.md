@@ -64,7 +64,7 @@ Promise factory to interact with Pexels Popular Photos API
 | **page** | *number* | The page number to return (Defaults to 1)
 
 ```js
-PexelsAPI.popular(per_page, page);
+PexelsAPI.getPopularPhotos(per_page, page);
 ```
 
 
