@@ -1,5 +1,5 @@
 var fetch = require('node-fetch');
-var BASE_URL = "http://api.pexels.com/v1/";
+var BASE_URL = "https://api.pexels.com/v1/";
 var DIRECTORY = {
     SEARCH_URL: BASE_URL + "search",
     POPULAR_URL: BASE_URL + "popular"
