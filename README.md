@@ -157,7 +157,7 @@ PexelsAPI.getPopularVideos(per_page, page);
 | Version | Changes |
 | ------- | ------- |
 | **v1.0.8** | First published version |
-| **v1.0.9** | Extended library to accommodate new APIs: `getCuratedPhotos` `getPhoto` `searchVideos` `getPopularVideos`, Base URL uses HTTPS by default |
+| **v1.1.1** | Extended library to accommodate new APIs: `getCuratedPhotos` `getPhoto` `searchVideos` `getPopularVideos`, Base URL uses HTTPS by default |
 
 
 ### Contribution Ideas
