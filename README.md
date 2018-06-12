@@ -152,9 +152,26 @@ Promise factory to interact with Pexels Popular Videos API
 PexelsAPI.getPopularVideos(per_page, page);
 ```
 
+### Changelog
+
+| Version | Changes |
+| ------- | ------- |
+| **v1.0.8** | First published version |
+| **v1.0.9** | Extended library to accommodate new APIs: `getCuratedPhotos` `getPhoto` `searchVideos` `getPopularVideos`, Base URL uses HTTPS by default |
+
+
+### Contribution Ideas
+
+1. Change the string parameter (API Key) currently used while initializing the client to support an options object as well. This object can contain the `apiKey` and `useHttps` as options to start with which can drive whether the client uses HTTP or HTTPS. This will also create a structure which can allow future extensibility by adding keys to the options object.
+2. Make this library browser friendly. Refactor code to stop using `node-fetch` and use an isomorphic version instead. The current version, as it stands, is not optimal to be used on the browser.
+
 ### Acknowledgements
 Thanks, [Pexels](http://pexels.com) for creating a great platform for great images. Always rooting for you.
 
+I'd like to thank all the folks taking the time out to keep this library in sync with the Pexels API. Power to you!
+
+Shout out to:
+[@fcrespo82](https://github.com/fcrespo82) and [@jeffski](https://github.com/cravindra/pexels-api-wrapper/issues?q=is%3Apr+author%3Ajeffski) for their pull requests.
 
 Made with :heart: at [Shopalyst](http://shopalyst.com)
 

@@ -43,7 +43,7 @@ function prepareUrl(directory, query, perPage, page) {
  * Send request to Pexels API and return response
  * @param {PexelsApi} self
  * @param {string} url
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 function request(self, url) {
     return fetch(url, {
@@ -61,7 +61,7 @@ function request(self, url) {
  * @param {string} query Search term
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 PexelsApi.prototype.search = function (query, perPage, page) {
     var url = prepareUrl(DIRECTORY.SEARCH_URL, query, perPage, page);
@@ -72,7 +72,7 @@ PexelsApi.prototype.search = function (query, perPage, page) {
  * Promise factory to interact with Pexels Popular Photos API
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 PexelsApi.prototype.getPopularPhotos = function (perPage, page) {
     var url = prepareUrl(DIRECTORY.POPULAR_URL, null, perPage, page);
@@ -83,7 +83,7 @@ PexelsApi.prototype.getPopularPhotos = function (perPage, page) {
  * Promise factory to interact with Pexels Curated Photos API
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 PexelsApi.prototype.getCuratedPhotos = function (perPage, page) {
     var url = prepareUrl(DIRECTORY.CURATED_URL, null, perPage, page);
@@ -95,7 +95,7 @@ PexelsApi.prototype.getCuratedPhotos = function (perPage, page) {
  * @param {string} query Search term
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 PexelsApi.prototype.searchVideos = function (query, perPage, page) {
     var url = prepareUrl(DIRECTORY.VIDEO_SEARCH_URL, query, perPage, page);
@@ -106,7 +106,7 @@ PexelsApi.prototype.searchVideos = function (query, perPage, page) {
  * Promise factory to interact with Pexels Popular Videos API
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 PexelsApi.prototype.getPopularVideos = function (perPage, page) {
     var url = prepareUrl(DIRECTORY.POPULAR_VIDEO_URL, null, perPage, page);
@@ -116,7 +116,7 @@ PexelsApi.prototype.getPopularVideos = function (perPage, page) {
 /**
  * Promise factory to interact with Pexels API to request a specific photo by ID
  * @param {number} id
- * @returns {string|Promise}
+ * @returns {Promise}
  */
 PexelsApi.prototype.getPhoto = function (id) {
     var url = DIRECTORY.PHOTO_URL + id;
