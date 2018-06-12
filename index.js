@@ -5,7 +5,7 @@ var DIRECTORY = {
     POPULAR_URL: BASE_URL + "v1/popular",
     CURATED_URL: BASE_URL + "v1/curated",
     VIDEO_SEARCH_URL: BASE_URL + "videos/search",
-    POPULAR_VIDEO_URL: BASE_URL + "/videos/popular",
+    POPULAR_VIDEO_URL: BASE_URL + "videos/popular",
     PHOTO_URL: BASE_URL + "v1/photos/"
 };
 

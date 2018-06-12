@@ -171,7 +171,7 @@ Thanks, [Pexels](http://pexels.com) for creating a great platform for great imag
 I'd like to thank all the folks taking the time out to keep this library in sync with the Pexels API. Power to you!
 
 Shout out to:
-[@fcrespo82](https://github.com/fcrespo82) and [@jeffski](https://github.com/cravindra/pexels-api-wrapper/issues?q=is%3Apr+author%3Ajeffski) for their pull requests.
+[@fcrespo82](https://github.com/fcrespo82) and [@jeffski](https://github.com/jeffski) for their pull requests.
 
 Made with :heart: at [Shopalyst](http://shopalyst.com)
 
