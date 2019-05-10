@@ -135,9 +135,13 @@ Promise factory to interact with Pexels Videos API
 | **query** | *string* | The search term to query the API with
 | **per_page** | *number* | The number of results to return per page (Defaults to 10)
 | **page** | *number* | The page number to return (Defaults to 1)
+| **min_width** | *number* | The minimum width in pixels of the returned videos. (optional)
+| **max_width** | *number* | The maximum width in pixels of the returned videos. (optional)
+| **min_duration** | *number* | The minimum duration in seconds of the returned videos. (optional)
+| **max_duration** | *number* | The maximum duration in seconds of the returned videos. (optional)
 
 ```js
-PexelsAPI.searchVideos(query, per_page, page);
+PexelsAPI.searchVideos(query, per_page, page, min_width, max_width, min_duration, max_duration);
 ```
 
 #### Popular Videos
@@ -147,9 +151,13 @@ Promise factory to interact with Pexels Popular Videos API
 | ----- | ---- | ----------- |
 | **per_page** | *number* | The number of results to return per page (Defaults to 10)
 | **page** | *number* | The page number to return (Defaults to 1)
+| **min_width** | *number* | The minimum width in pixels of the returned videos. (optional)
+| **max_width** | *number* | The maximum width in pixels of the returned videos. (optional)
+| **min_duration** | *number* | The minimum duration in seconds of the returned videos. (optional)
+| **max_duration** | *number* | The maximum duration in seconds of the returned videos. (optional)
 
 ```js
-PexelsAPI.getPopularVideos(per_page, page);
+PexelsAPI.getPopularVideos(per_page, page, min_width, max_width, min_duration, max_duration);
 ```
 
 ### Changelog
@@ -174,4 +182,3 @@ Shout out to:
 [@fcrespo82](https://github.com/fcrespo82) and [@jeffski](https://github.com/jeffski) for their pull requests.
 
 Made with :heart: at [Shopalyst](http://shopalyst.com)
-
