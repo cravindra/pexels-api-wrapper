@@ -19,6 +19,7 @@ function PexelsApi(apiKey) {
     }
     var self = this;
     self.apiKey = apiKey;
+    self.mode = 'cors',
     self.headers = {
         'Authorization': apiKey
     };
