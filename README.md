@@ -166,6 +166,7 @@ PexelsAPI.getPopularVideos(per_page, page, min_width, max_width, min_duration, m
 | ------- | ------- |
 | **v1.0.8** | First published version |
 | **v1.1.1** | Extended library to accommodate new APIs: `getCuratedPhotos` `getPhoto` `searchVideos` `getPopularVideos`, Base URL uses HTTPS by default |
+| **v1.1.2** | Extended library to accommodate new parameters for width and duration|
 
 
 ### Contribution Ideas
