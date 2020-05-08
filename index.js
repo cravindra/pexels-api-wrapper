@@ -30,13 +30,33 @@ function PexelsApi(apiKey) {
  * @param {string} query
  * @param {number} perPage
  * @param {number} page
+ * @param {number} minWidth
+ * @param {number} maxWidth
+ * @param {number} minDuration
+ * @param {number} maxDuration
  * @returns {string}
  */
-function prepareUrl(directory, query, perPage, page) {
-    var search = query ? "query=" + (query ? encodeURIComponent(query) : "") : "";
-    return directory + "?" + search +
-        "&per_page=" + (perPage && !isNaN(perPage) ? +perPage : 10) +
-        "&page=" + (page && !isNaN(page) ? +page : 1);
+function prepareUrl(
+    directory, query, perPage, page, minWidth, maxWidth, minDuration, maxDuration
+) {
+    var search = query ? "query=" + (query ? encodeURIComponent(query) : "") : ""
+        + "&per_page=" + (perPage && !isNaN(perPage) ? +perPage : 10)
+        + "&page=" + (page && !isNaN(page) ? +page : 1);
+
+    if (minWidth && !isNaN(minWidth)) {
+        search += "&min_width=" + minWidth;
+    }
+    if (maxWidth && !isNaN(maxWidth)) {
+        search += "&max_width=" + maxWidth;
+    }
+    if (minDuration && !isNaN(minDuration)) {
+        search += "&min_duration=" + minDuration;
+    }
+    if (maxDuration && !isNaN(maxDuration)) {
+        search += "&max_duration=" + maxDuration;
+    }
+
+    return directory + "?" + search;
 }
 
 /**
@@ -95,10 +115,26 @@ PexelsApi.prototype.getCuratedPhotos = function (perPage, page) {
  * @param {string} query Search term
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
+ * @param {number} minWidth Specifies the minimum width in pixels of the returned videos
+ * @param {number} maxWidth Specifies the maximum width in pixels of the returned videos
+ * @param {number} minDuration Specifies the minimum duration in seconds of the returned videos
+ * @param {number} maxDuration Specifies the maximum duration in seconds of the returned videos
  * @returns {Promise}
  */
-PexelsApi.prototype.searchVideos = function (query, perPage, page) {
-    var url = prepareUrl(DIRECTORY.VIDEO_SEARCH_URL, query, perPage, page);
+PexelsApi.prototype.searchVideos = function (
+    query, perPage, page, minWidth, maxWidth, minDuration, maxDuration
+) {
+    var url = prepareUrl(
+        DIRECTORY.VIDEO_SEARCH_URL,
+        query,
+        perPage,
+        page,
+        minWidth,
+        maxWidth,
+        minDuration,
+        maxDuration
+    );
+
     return request(this, url);
 };
 
@@ -106,10 +142,26 @@ PexelsApi.prototype.searchVideos = function (query, perPage, page) {
  * Promise factory to interact with Pexels Popular Videos API
  * @param {number} perPage Specifies the number of items per page (Defaults to 10)
  * @param {number} page Specifies the page being requested (Defaults to 1)
+ * @param {number} minWidth Specifies the minimum width in pixels of the returned videos
+ * @param {number} maxWidth Specifies the maximum width in pixels of the returned videos
+ * @param {number} minDuration Specifies the minimum duration in seconds of the returned videos
+ * @param {number} maxDuration Specifies the maximum duration in seconds of the returned videos
  * @returns {Promise}
  */
-PexelsApi.prototype.getPopularVideos = function (perPage, page) {
-    var url = prepareUrl(DIRECTORY.POPULAR_VIDEO_URL, null, perPage, page);
+PexelsApi.prototype.getPopularVideos = function (
+    perPage, page, minWidth, maxWidth, minDuration, maxDuration
+) {
+    var url = prepareUrl(
+        DIRECTORY.POPULAR_VIDEO_URL,
+        null,
+        perPage,
+        page,
+        minWidth,
+        maxWidth,
+        minDuration,
+        maxDuration
+    );
+
     return request(this, url);
 };
 
