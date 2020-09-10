@@ -9,7 +9,7 @@
   "author": "Chirag Ravindra",
   "license": "ISC",
   "dependencies": {
-    "node-fetch": "^1.7.1"
+    "node-fetch": "^2.6.1"
   },
   "repository": {
     "type": "git",
