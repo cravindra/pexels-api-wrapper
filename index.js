@@ -39,7 +39,7 @@ function PexelsApi(apiKey) {
 function prepareUrl(
     directory, query, perPage, page, minWidth, maxWidth, minDuration, maxDuration
 ) {
-    var search = query ? "query=" + (query ? encodeURIComponent(query) : "") : ""
+    var search = (query ? "query=" + (query ? encodeURIComponent(query) : "") : "")
         + "&per_page=" + (perPage && !isNaN(perPage) ? +perPage : 10)
         + "&page=" + (page && !isNaN(page) ? +page : 1);
 
