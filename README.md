@@ -1,6 +1,8 @@
 # Pexels API
 A simple wrapper to use the [Pexels API](https://www.pexels.com/api/). Please refer to the API docs to undestand the inputs and expected results.
 
+# NOTE: This repo is not maintained anymore
+
 ### Installation
 
 Install the package
